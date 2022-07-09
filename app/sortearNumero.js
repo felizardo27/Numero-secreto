@@ -13,6 +13,3 @@ function alteraValor(id, valor){
     document.querySelector(id).innerHTML = valor;
 }
 
-console.log('Numero secreto: ',numeroSecreto);
-
-
