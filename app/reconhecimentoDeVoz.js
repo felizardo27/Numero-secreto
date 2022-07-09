@@ -10,6 +10,7 @@ recognition.start();
 recognition.addEventListener('result', (e) => {
     const chute = e.results[0][0].transcript;
     exibeChute(chute);
+    verificaChute(chute);
 });
 
 function exibeChute(chute) {
@@ -19,3 +20,6 @@ function exibeChute(chute) {
         <span class="box">${chute}</span>
     `;
 }
+
+
+recognition.addEventListener('end', () => recognition.start());
